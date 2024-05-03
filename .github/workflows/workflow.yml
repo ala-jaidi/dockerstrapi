@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-workflow_dispatch:
+  workflow_dispatch:  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -37,4 +38,4 @@ jobs:
         with:
           context: ./Docker-Strapigen
           push: true
-          tags: alajaidi07/${{ github.repository }}:latest
+          tags: alajaidi07/strapi-gen:latest

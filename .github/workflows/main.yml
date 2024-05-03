@@ -37,6 +37,4 @@ jobs:
         with:
           context: ./Docker-Strapigen
           push: true
-          tags: alajaidi07/${{ github.repository }}:latest
-          build-args: |
-      BASE_IMAGE=ala:v20.5.0-alpine
+          tags: alajaidi07/strapi-gen:latest

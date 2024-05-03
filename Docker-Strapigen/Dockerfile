@@ -1,19 +1,18 @@
-FROM ala:v20.5.0-alpine
+FROM node:14-alpine
 
-    # Ajoutez d'autres instructions Docker en fonction de votre configuration
+# Ajoutez d'autres instructions Docker en fonction de votre configuration
 
-    WORKDIR /opt/app
+WORKDIR /opt/app
 
-    COPY package*.json ./
+COPY package*.json ./
 
-    RUN npm install
+RUN npm install
 
-    COPY . .
+COPY . .
 
-    ENV APP_KEYS=azer
-    ENV NODE_ENV=14
+ENV APP_KEYS=azer
+ENV NODE_ENV=14
 
-    EXPOSE 8080
+EXPOSE 8080
 
-    CMD ["npm", "start"]
-    
+CMD ["npm", "start"]
